@@ -4,6 +4,8 @@
 
 local NvimDapUi = { "rcarriga/nvim-dap-ui" }
 
+NvimDapUi.dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" }
+
 NvimDapUi.config = function()
     local dap, dapui = require("dap"), require("dapui")
 
