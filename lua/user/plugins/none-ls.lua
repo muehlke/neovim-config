@@ -16,6 +16,7 @@ NoneLs.opts = function()
         sources = {
             null_ls.builtins.diagnostics.markdownlint,
             null_ls.builtins.formatting.markdownlint,
+            null_ls.builtins.formatting.prettier.with({ filetypes = { "json" } })
         },
         on_attach = require('user.lsp_on_attach')
     }
