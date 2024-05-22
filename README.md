@@ -6,6 +6,10 @@
 - latest OpenJDK
 - plantuml-X-X.X.X.jar installed at /usr/share/java
 
+## `Telescope`
+
+- `ripgrep` for `Live grep` feature
+
 # Install with
 
 ## SSH
