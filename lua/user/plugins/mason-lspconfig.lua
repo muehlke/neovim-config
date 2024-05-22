@@ -79,6 +79,9 @@ MasonLspconfig.config = function(_, opts)
             end,
             omnisharp = function()
                 require('lspconfig').omnisharp.setup({})
+            end,
+            ruff_lsp = function ()
+                require('lspconfig').ruff_lsp.setup({})
             end
         },
     })
