@@ -80,8 +80,19 @@ MasonLspconfig.config = function(_, opts)
             omnisharp = function()
                 require('lspconfig').omnisharp.setup({})
             end,
-            ruff_lsp = function ()
-                require('lspconfig').ruff_lsp.setup({})
+            pylsp = function()
+                require('lspconfig').pylsp.setup({})
+            end,
+            yamlls = function()
+                local yaml_opts = {}
+                yaml_opts.capabilities = vim.lsp.protocol.make_client_capabilities()
+                -- Tell the server the capability of foldingRange,
+                -- Neovim hasn't added foldingRange to default capabilities, users must add it manually
+                yaml_opts.capabilities.textDocument.foldingRange = {
+                    dynamicRegistration = false,
+                    lineFoldingOnly = true
+                }
+                require('lspconfig').yamlls.setup(yaml_opts)
             end
         },
     })
