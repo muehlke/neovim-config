@@ -171,6 +171,8 @@ local LspOnAttach = function(client, bufnr)
         vim.fn.sign_define(hl, { text = icon, numhl = hl, texthl = hl })
     end
 
+    -- require("lsp-zero").buffer_autoformat()
+    
     lsp_symbol("Error", "󰅙")
     lsp_symbol("Warn", "")
     lsp_symbol("Info", "󰋼")
