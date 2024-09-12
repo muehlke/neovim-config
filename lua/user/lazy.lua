@@ -47,6 +47,7 @@ local specs = {
     plugin("nvim-foldsign"),
     plugin("nvim-lspconfig"),
     plugin("nvim-soil"),
+    plugin("nvim-surround"),
     plugin("nvim-tree"),
     plugin("nvim-treesitter-context"),
     plugin("nvim-treesitter-playground"),
