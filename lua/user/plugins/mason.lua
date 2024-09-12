@@ -9,7 +9,8 @@ Mason.opts = function()
     return {
         ensure_installed = { -- not an option from mason.nvim
             "lua-language-server", "clangd", "prettier", "luaformatter",
-            "python-lsp-server", "dockerfile-language-server"
+            "python-lsp-server", "dockerfile-language-server", "pylint",
+            "luacheck"
         },
 
         PATH = "skip",
