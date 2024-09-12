@@ -27,6 +27,7 @@ local specs = {
     plugin("barbar"),
     plugin("catppuccin"),
     plugin("comment"),
+    plugin("conform"),
     plugin("diffview"),
     plugin("fidget"),
     plugin("gitsigns"),

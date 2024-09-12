@@ -166,8 +166,6 @@ local LspOnAttach = function(client, bufnr)
     vim.keymap.set("n", "<leader>lf",
         function() vim.lsp.buf.format({ async = true }) end, { desc = "LSP [f]ormatting" })
 
-    require("lsp-zero").buffer_autoformat()
-
     local function lsp_symbol(name, icon)
         local hl = "DiagnosticSign" .. name
         vim.fn.sign_define(hl, { text = icon, numhl = hl, texthl = hl })
