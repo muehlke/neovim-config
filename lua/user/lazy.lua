@@ -39,7 +39,6 @@ local specs = {
     plugin("lualine"),
     plugin("mason-lspconfig"),
     plugin("mason"),
-    plugin("none-ls"),
     plugin("nvim-autopairs"),
     plugin("nvim-cmp"),
     plugin("nvim-dap-ui"),
