@@ -45,6 +45,7 @@ local specs = {
     plugin("nvim-dap-ui"),
     plugin("nvim-dap"),
     plugin("nvim-foldsign"),
+    plugin("nvim-lint"),
     plugin("nvim-lspconfig"),
     plugin("nvim-soil"),
     plugin("nvim-surround"),
