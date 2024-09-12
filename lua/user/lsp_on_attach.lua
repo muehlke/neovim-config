@@ -172,7 +172,7 @@ local LspOnAttach = function(client, bufnr)
     end
 
     -- require("lsp-zero").buffer_autoformat()
-    
+
     lsp_symbol("Error", "󰅙")
     lsp_symbol("Warn", "")
     lsp_symbol("Info", "󰋼")

@@ -1,14 +1,16 @@
 -------------------------------------------------------------------------------
 -- LAZY - PLUGIN SPEC
 -------------------------------------------------------------------------------
+local Mason = {"williamboman/mason.nvim"}
 
-local Mason = { "williamboman/mason.nvim" }
-
-Mason.cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" }
+Mason.cmd = {"Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate"}
 
 Mason.opts = function()
     return {
-        ensure_installed = { "lua-language-server", "clangd" }, -- not an option from mason.nvim
+        ensure_installed = { -- not an option from mason.nvim
+            "lua-language-server", "clangd", "prettier", "luaformatter",
+            "python-lsp-server", "dockerfile-language-server"
+        },
 
         PATH = "skip",
 
@@ -16,7 +18,7 @@ Mason.opts = function()
             icons = {
                 package_pending = " ",
                 package_installed = "󰄳 ",
-                package_uninstalled = " 󰚌",
+                package_uninstalled = " 󰚌"
             },
 
             keymaps = {
@@ -27,11 +29,11 @@ Mason.opts = function()
                 update_all_servers = "U",
                 check_outdated_servers = "C",
                 uninstall_server = "X",
-                cancel_installation = "<C-c>",
-            },
+                cancel_installation = "<C-c>"
+            }
         },
 
-        max_concurrent_installers = 10,
+        max_concurrent_installers = 10
     }
 end
 
@@ -44,8 +46,9 @@ Mason.config = function(_, opts)
         end
     end
 
-    vim.api.nvim_create_user_command("MasonInstallAll", install_all,
-        { desc = "Install all mason binaries listed in the ensure_installed option" })
+    vim.api.nvim_create_user_command("MasonInstallAll", install_all, {
+        desc = "Install all mason binaries listed in the ensure_installed option"
+    })
 
     vim.g.mason_binaries_list = opts.ensure_installed
 end
