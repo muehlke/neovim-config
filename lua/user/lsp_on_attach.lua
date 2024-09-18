@@ -130,6 +130,9 @@ local LspOnAttach = function(client, bufnr)
     vim.keymap.set({ "n", "v" }, "<leader>la", function() vim.lsp.buf.code_action() end,
         { desc = "LSP code [a]ction", buffer = bufnr })
 
+    vim.keymap.set({ "n", "v" }, "<leader>li", function () vim.cmd("LspInfo") end,
+        { desc = "LSP [I]nfo", buffer = bufnr })
+
     vim.keymap.set("n", "gr", require('telescope.builtin').lsp_references,
         { desc = "LSP references", buffer = bufnr })
 
